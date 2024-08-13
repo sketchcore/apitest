@@ -1,0 +1,11 @@
+name,url,selector
+GitHub REST API,https://docs.github.com/en/rest,[data-testid="version"]
+Google Analytics Data API,https://developers.google.com/analytics/devguides/reporting/data/v1/changelog,strong
+Display & Video 360 API,https://developers.google.com/display-video/api/release-notes,strong
+The Trade Desk API,https://partner.thetradedesk.com/v3/portal/api/doc/UpgradeSupport,#august-12-2024 > div
+Facebook Marketing API,https://developers.facebook.com/docs/marketing-api/marketing-api-changelog,#u_0_1_HV > tr.row_0 > td:nth-child(2) > p
+Bing Ads API,https://learn.microsoft.com/en-us/advertising/guides/release-notes?view=bingads-13,[id="july2024"]
+TikTok Ads API,https://developers.tiktok.com/doc/changelog?enter_method=left_navigation,body > table > tr:nth-child(2) > td:nth-child(1) > p
+Google Ads API,https://developers.google.com/google-ads/api/docs/release-notes,#v1710_2024-08-07 > span
+X API,https://developer.x.com/en/updates/changelog,#twtr-main > div.ct01-columns > div > div > div > div > div > div.ct12-content-tabs.twtr-component-space--md.twtr-component--last.twtr-component > div > div.ct12__swiper-container.swiper-container.swiper-fade.swiper-initialized.swiper-horizontal.swiper-pointer-events.swiper-autoheight.swiper-backface-hidden > div > div > div > div > div > h3:nth-child(1)
+Amazon API,https://advertising.amazon.com/API/docs/en-us/release-notes/index,#august-2024
