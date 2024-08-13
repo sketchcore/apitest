@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Last Update Dates</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h1>API Last Update Dates</h1>
+    <table id="apiTable">
+        <tr>
+            <th>API Name</th>
+            <th>Last Updated</th>
+            <th>Documentation URL</th>
+        </tr>
+        <!-- Data will be inserted here -->
+    </table>
+
+    <script>
+        fetch('api_update_dates.csv')
+            .then(response => response.text())
+            .then(data => {
+                const rows = data.split('\n').slice(1);  // Skip header row
+                const tableBody = document.getElementById('apiTable');
+                
+                rows.forEach(row => {
+                    if (row.trim() !== '') {
+                        const [name, url, lastUpdated, scrapedAt] = row.split(',');
+                        const tr = document.createElement('tr');
+                        tr.innerHTML = `
+                            <td>${name}</td>
+                            <td>${lastUpdated}</td>
+                            <td><a href="${url}" target="_blank">${url}</a></td>
+                        `;
+                        tableBody.appendChild(tr);
+                    }
+                });
+            })
+            .catch(error => console.error('Error:', error));
+    </script>
+</body>
+</html>
