@@ -34,7 +34,7 @@ def format_date(raw_date):
 
 # Read API configurations from CSV
 apis = []
-with open('apitest/api_config.csv', mode='r') as file:  # Updated path
+with open('api_config.csv', mode='r') as file:  # Updated path
     reader = csv.DictReader(file)
     for row in reader:
         apis.append({
@@ -46,10 +46,10 @@ with open('apitest/api_config.csv', mode='r') as file:  # Updated path
 results = []
 
 # Update the path for the CSV file
-csv_file_path = 'apitest/api_update_dates.csv'
+csv_file_path = 'api_update_dates.csv'  # If saving in the same directory
 
 # Update the path for the last run time file
-last_run_file_path = 'apitest/last_run.txt'
+last_run_file_path = 'last_run.txt'  # If saving in the same directory
 
 for api in apis:
     raw_date = scrape_api_update_date(api['url'], api['selector'])
